@@ -1,0 +1,24 @@
+
+# Sensitive Files
+.env
+coordinates.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Logs and Data
+logs/
+*.log
+screenshots/
+media/
+automaton.log
+
+# IDE
+.vscode/
+.idea/

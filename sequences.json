@@ -1,0 +1,124 @@
+[
+    {
+        "title": "Iniciar sesión",
+        "intents_number": 3,
+        "target_element": "ibp-quick-access",
+        "target_element_wait": 5,
+        "steps": [
+            {
+                "action": "navigate",
+                "data": "https://ibp.bhd.com.do/#/login",
+                "wait_after": 2
+            },
+            {
+                "action": "input",
+                "element": "#userName",
+                "data": "env:BHD_USER",
+                "wait_after": 1
+            },
+            {
+                "action": "input",
+                "element": "#password",
+                "data": "env:BHD_PASS",
+                "wait_after": 1
+            },
+            {
+                "action": "click",
+                "element": "button:has-text('Entrar')",
+                "wait_after": 5
+            }
+        ]
+    },
+    {
+        "title": "Navegar a area de pagos",
+        "intents_number": 3,
+        "target_element": "p-select[inputid='beneficiary']",
+        "target_element_wait": 5,
+        "steps": [
+            {
+                "action": "navigate",
+                "data": "https://ibp.bhd.com.do/#/bhd/payments-transfers/OB",
+                "wait_after": 5
+            },
+            {
+                "action": "click",
+                "element": "button:has-text('Entendido')",
+                "optional": true,
+                "wait_after": 2
+            },
+            {
+                "action": "click",
+                "element": "p-select[inputid='channel']",
+                "wait_after": 2
+            },
+            {
+                "action": "click",
+                "element": "li:has-text('A tercero en BHD')",
+                "wait_after": 2
+            },
+            {
+                "action": "click",
+                "element": "p-select[inputid='debitProduct']",
+                "wait_after": 2
+            },
+            {
+                "action": "click",
+                "element": "li:has-text('17155440010')",
+                "wait_after": 2
+            }
+        ]
+    },
+    {
+        "title": "Seleccionar Beneficiario y Monto",
+        "intents_number": 3,
+        "target_element": "input[name='positionKey']",
+        "target_element_wait": 5,
+        "steps": [
+            {
+                "action": "click",
+                "element": "p-select[inputid='beneficiary']",
+                "wait_after": 2
+            },
+            {
+                "action": "click",
+                "element": "li:has-text('CRIQUET, PETER ALEXANDER')",
+                "wait_after": 2
+            },
+            {
+                "action": "input",
+                "element": "input[name='amount']",
+                "data": "10",
+                "wait_after": 2
+            },
+            {
+                "action": "click",
+                "element": "button:has-text('Continuar')",
+                "wait_after": 5
+            }
+        ]
+    },
+    {
+        "title": "Ingresar Token de Coordenadas",
+        "intents_number": 3,
+        "target_element": "button:has-text('Realizar otra transacción')",
+        "target_element_wait": 30,
+        "steps": [
+            {
+                "action": "wait",
+                "wait_after": 5
+            },
+            {
+                "action": "dynamic_input",
+                "element": "input[name='positionKey']",
+                "data": "p-inputgroup-addon",
+                "lookup_source": "coordinates.json",
+                "wait_after": 1
+            },
+            {
+                "action": "click",
+                "element": "button:has-text('Realizar transacción')",
+                "wait_after": 2
+            }
+        ]
+    }
+]
