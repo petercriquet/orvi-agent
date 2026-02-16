@@ -22,3 +22,8 @@ automaton.log
 # IDE
 .vscode/
 .idea/
+
+# PyInstaller
+build/
+dist/
+*.spec
