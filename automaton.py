@@ -173,6 +173,7 @@ class PlaywrightEngine:
         # Headless=False para ver el navegador y posibles captchas
         # slow_mo=100 ralentiza cada operación de Playwright 100ms
         self.browser = await self.playwright.chromium.launch(
+            channel="chrome",
             headless=False, 
             slow_mo=100,
             args=["--disable-features=Translate", "--disable-translate"]

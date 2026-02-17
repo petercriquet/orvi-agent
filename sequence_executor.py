@@ -66,14 +66,14 @@ class SequenceExecutor:
                         await engine.page.goto(data, wait_until="domcontentloaded")
                     
                 elif action == "input":
-                    await engine.page.wait_for_selector(element, state="visible", timeout=5000)
+                    await engine.page.wait_for_selector(element, state="visible", timeout=2000)
                     await engine.page.click(element)
                     await engine.page.keyboard.press("Control+A")
                     await engine.page.keyboard.press("Backspace")
                     await engine.page.keyboard.type(data, delay=50)
                         
                 elif action == "click":
-                    timeout = 2000 if optional else 5000
+                    timeout = 2000 if optional else 2000
                     await engine.page.wait_for_selector(element, state="visible", timeout=timeout)
                     await engine.page.click(element)
                     

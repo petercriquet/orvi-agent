@@ -3,7 +3,7 @@ import json
 import time
 
 def test_api():
-    url = "http://localhost:8000/execute"
+    url = "http://localhost:8080/execute"
     
     # Load data from local files to construct payload
     try:

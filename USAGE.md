@@ -16,6 +16,12 @@ Run the executable directly. It must be in the same folder as `sequences.json` a
 OrviAgentAPI.exe --port 8080
 ```
 
+### Option C: Using Demo Executable (All-in-One)
+Run the demo executable to see the automation in action without any configuration.
+```cmd
+OrviAgentDemo.exe
+```
+
 ## 2. API Endpoint
 
 -   **URL**: `POST http://localhost:<port>/execute`
