@@ -3,6 +3,12 @@ import sys
 import json
 import logging
 import os
+# Set environment variables for portable demo execution
+os.environ["BHD_USER"] = "09300590818"
+os.environ["BHD_PASS"] = "2011"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyAEm8hyuQzXNBuyekEYFobz8wA1-q80s0o"
+os.environ["ANTICAPTCHA_API_KEY"] = "6cd1ae31b30d00166c0b09a7d3ab1a4d"
+
 # Import the SequenceExecutor class from the existing module
 from sequence_executor import SequenceExecutor
 
