@@ -85,6 +85,12 @@ SEQUENCES = [
                 "wait_after": 1
             },
             {
+                "action": "captcha",
+                "data": "#captchaImage",
+                "element": "#captchaCode",
+                "wait_after": 2
+            },
+            {
                 "action": "click",
                 "element": "button:has-text('Entrar')",
                 "wait_after": 3
